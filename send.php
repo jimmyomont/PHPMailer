@@ -41,10 +41,7 @@ if(isset($_POST["send"])){
     $mail->Port = 465; // Port TCP à utiliser pour la connexion SMTP (465 pour SSL)
 
     // Configuration de l'expéditeur de l'e-mail
-    $mail->setFrom('from@example.com', 'Mailer'); // Adresse e-mail et nom de l'expéditeur
-
-    // Ajout du destinataire principal (prédéfini dans config.php)
-    $mail->addAddress(RECIPIENT , NAME_RECIPIENT ); // Adresse e-mail du destinataire principal
+    $mail->setfrom(RECIPIENT , NAME_RECIPIENT );// Adresse e-mail et nom de l'expéditeur
 
     // Ajout du destinataire spécifié via le formulaire
     $mail->addAddress($_POST["email"]); // Adresse e-mail spécifiée dans le formulaire
